@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(./assets/Scenery\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.mountain {
+    position: relative;
+    bottom: -400px;
+    left: 0;
+    height: 300px;
+    width: 3600px;
+    background-image: url(./assets/Mountain\ 1.png);
+    background-size: 1400px 400px;
+    background-repeat: repeat;
+    animation: mountain 2s linear infinite backwards;
+
+}
+
+@keyframes mountain {
+    to {
+        transform: translate(-1385px, 0);
+    }
+}
+
+.car {
+    position: absolute;
+    bottom: 10px;
+    left: 300px;
+    animation: car 1s ease-in-out infinite alternate;
+}
+
+.car-box {
+    position: relative;
+    bottom: -410px;
+    left: 100px;
+}
+
+.car-box::after {
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    left: 324px;
+    border-radius: 50%;
+    background-image: url(./assets/wheel.png);
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    animation: car2 1s linear infinite backwards;
+}
+.car-box::before {
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    left: 423px;
+    border-radius: 50%;
+    background-image: url(./assets/wheel.png);
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+    animation: car2 1s linear infinite backwards;
+}
+
+@keyframes car {
+    from {
+        transform: translate(0, -5px);
+    }
+
+    to {
+        transform: translate(0, -5px);
+    }
+}
+@keyframes car2 {
+    from {
+        transform: translate(0, -5px);
+    }
+
+    to {
+        transform: translate(0, -5px) rotate(360deg);
+    }
+}
